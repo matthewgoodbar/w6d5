@@ -1,0 +1,11 @@
+<% url = action == 'index' ? cat_url(cat) : cats_url %>
+<% text = action == 'index' ? 'inspect' : 'return to all cats' %>
+
+<ul>
+    <li>Name: <%= cat.name%></li>
+    <li>Color: <%= cat.color%></li>
+    <li>Sex: <%= cat.sex%></li>
+    <li>Birth Date:<%= cat.birth_date%> </li>
+    <li>Description: <%= cat.description || "n/a" %></li>
+    <a href="<%= url %>"><%= text %></a>
+</ul>

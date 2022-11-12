@@ -13,10 +13,10 @@
 #
 require 'date'
 class Cat < ApplicationRecord
-    CAT_COLORS = %w(brown black white orange)
+    CAT_COLORS = ['brown', 'black', 'white', 'orange']
 
     validates :birth_date, presence: true
-    validates :color, presence: true, inclusion: {in: CAT_COLORS, message: 'Color is not in list'}
+    validates :color, presence: true, inclusion: {in: CAT_COLORS}
     validates :name, presence: true
     validates :sex, presence: true, inclusion: {in: %w(M F)}
 
