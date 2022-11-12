@@ -7,5 +7,11 @@
     <li>Sex: <%= cat.sex%></li>
     <li>Birth Date:<%= cat.birth_date%> </li>
     <li>Description: <%= cat.description || "n/a" %></li>
+    
+    <% if action == 'show' %>
+       <a href="<%= edit_cat_url(cat)%>">Edit cat</a>
+    <% end %>
+    <br>
+
     <a href="<%= url %>"><%= text %></a>
 </ul>
